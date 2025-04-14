@@ -1,0 +1,256 @@
+/* =============================== */
+/*          GLOBAL RESET AND STYLING */
+/* =============================== */
+
+/* Global reset for padding, margin, and box-sizing to ensure consistency across browsers */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* =============================== */
+/*          BODY STYLES            */
+/* =============================== */
+
+/* Body background color */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+  color: black; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #4CAF50;
+  border : 2px solid #3f9236
+}
+
+footer {
+  display: flex;
+  height : 125px ; 
+  padding: 1%;
+  background-color: #4CAF50;
+  border : 2px solid #3f9236
+}
+
+h1 {
+  color: #f7f7f7;
+  margin-left: 50px;
+}
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+main {
+  Margin : 2px ;
+  padding : 5px ;
+  Flex : 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =============================== */
+/*        CONTAINER STYLES         */
+/* =============================== */
+
+/* Main container for the content */
+.container {
+  font-size: 16px;                        /* Sets base font size */
+  background-color: #ffffff;              /* White background color for the container */
+  width: 90vw;                            /* Width is 90% of the viewport width */
+  max-width: 34em;                        /* Maximum width is capped at 34em */
+  position: absolute;                     /* Positioning container relative to viewport */
+  transform: translate(-50%, -50%);       /* Centers the container both vertically and horizontally */
+  top: 50%;                               /* Positions the container at 50% from the top */
+  left: 50%;                              /* Positions the container at 50% from the left */
+  padding: 3em;                           /* Adds padding inside the container */
+  border-radius: 0.6em;                   /* Rounded corners */
+  box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25); /* Shadow effect around the container */
+}
+
+/* =============================== */
+/*        OPTIONS CONTAINER STYLES  */
+/* =============================== */
+
+/* Centers the options container */
+#options-container {
+  text-align: center; /* Aligns text to the center */
+}
+
+/* Styles the div inside options container */
+#options-container div {
+  width: 100%;                            /* Takes full width */
+  display: flex;                          /* Uses flexbox for layout */
+  justify-content: space-between;         /* Distributes buttons evenly with space between */
+  margin: 1.2em 0 2.4em 0;                /* Adds margin around the buttons */
+}
+
+/* Button styles for options */
+#options-container button {
+  padding: 1em 2em;
+  width: 28%;
+  text-align : center;
+  font-weight: bolder;
+  margin: 2%;
+  text-align: center; 
+  background-color: #4CAF50;
+  color: white;
+  border : none; 
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: center;                     /* Changes cursor to pointer on hover */
+}
+
+/* Disabled button styles (grayed out) */
+#options-container button:disabled {
+  border: none;
+  color: #808080;                         /* Gray text */
+  background-color: #efefef;              /* Light gray background */
+}
+
+/* Active button state (highlighted button) */
+#options-container button.active {
+  background-color: #4caf50;              /* Green background when active */
+  border: none; 
+  color: #fff;                            /* White text */
+}
+
+/* =============================== */
+/*     LETTER CONTAINER STYLES      */
+/* =============================== */
+
+/* Styles for the container holding letter buttons */
+.letter-container {
+  width: 100%;                            /* Takes full width */
+  display: flex;                          /* Uses flexbox layout */
+  flex-wrap: wrap;                        /* Allows wrapping of letters onto new lines */
+  justify-content: center;                /* Centers the letters horizontally */
+  gap: 0.6em;                             /* Adds spacing between letter buttons */
+}
+.letter-container button:hover {
+  background-color: #f7f7f7;
+  border: 0.5px solid #9c9a9a
+}
+/* Styles for individual letter buttons */
+#letter-container button {
+  height: 2.4em;                          /* Sets height of letter buttons */
+  width: 2.4em;                           /* Sets width of letter buttons */
+  border-radius: 0.3em;                   /* Rounded corners for letter buttons */
+  background-color: #ffffff;              /* White background */
+  cursor: pointer;                       /* Changes cursor to pointer on hover */
+}
+
+/* =============================== */
+/*        NEW GAME POPUP STYLES     */
+/* =============================== */
+
+/* Full screen popup for new game */
+.new-game-popup {
+  background-color: #ffffff;              /* White background */
+  position: absolute;                     /* Position it absolutely */
+  left: 0;                                /* Full width of screen */
+  top: 0;                                 /* Full height of screen */
+  height: 100%;                           /* Full height */
+  width: 100%;                            /* Full width */
+  display: flex;                          /* Uses flexbox for layout */
+  align-items: center;                    /* Centers the content vertically */
+  justify-content: center;                /* Centers the content horizontally */
+  flex-direction: column;                 /* Stacks elements vertically */
+  border-radius: 0.6em;                   /* Rounded corners */
+}
+
+/* =============================== */
+/*     USER INPUT SECTION STYLES    */
+/* =============================== */
+
+/* Styles for the section that displays user input (the guessed word) */
+#user-input-section {
+  display: flex;                          /* Uses flexbox layout */
+  justify-content: center;                /* Centers content horizontally */
+  font-size: 1.8em;                       /* Increases font size for better visibility */
+  margin: 0.6em 0 1.2em 0;                /* Adds margin above and below */
+}
+
+/* =============================== */
+/*        CANVAS STYLES             */
+/* =============================== */
+
+/* Styles for the canvas element where the hangman is drawn */
+canvas {
+  display: block;                         /* Makes canvas a block element */
+  margin: auto;                           /* Centers the canvas horizontally */
+  border: 10px solid #4caf50;             /* Green border around the canvas */
+  border-radius: 10px;                    /* Rounded corners for canvas */
+}
+
+/* =============================== */
+/*          HIDE ELEMENT STYLES     */
+/* =============================== */
+
+/* Utility class to hide elements */
+.hide {
+  display: none;                          /* Hides elements with this class */
+}
+
+/* =============================== */
+/*          RESULT TEXT STYLES      */
+/* =============================== */
+
+/* Styles for the result text */
+#result-text h2 {
+  font-size: 1.8em;                       /* Increases font size for heading */
+  text-align: center;                     /* Centers the result heading */
+}
+
+/* Styles for the result paragraph */
+#result-text p {
+  font-size: 1.25em;                      /* Sets font size for the result message */
+  margin: 1em 0 2em 0;                    /* Adds margin around the result paragraph */
+}
+
+/* Highlight the word in the result */
+#result-text span {
+  font-weight: 600;                       /* Makes the word bold */
+}
+
+/* =============================== */
+/*         NEW GAME BUTTON STYLES   */
+/* =============================== */
+
+/* Styles for the new game button */
+#new-game-button {
+  font-size: 1.25em;                      /* Sets font size for the button */
+  padding: 0.5em 1em;                     /* Adds padding inside the button */
+  background-color: #4caf50;              /* Purple background color */
+  border: 3px solid #000000;              /* Black border */
+  color: #fff;                            /* White text */
+  border-radius: 0.2em;                   /* Rounded corners */
+  cursor: pointer;                       /* Changes cursor to pointer on hover */
+}
+
+/* =============================== */
+/*           MESSAGE STYLES         */
+/* =============================== */
+
+/* Styles for winning message */
+.win-msg {
+  color: #4caf50; /* Green text color for win */
+}
+
+/* Styles for losing message */
+.lose-msg {
+  color: #ff0000; /* Red text color for lose */
+}
+
+/* === Centered heading for Hangman === */
+#Hangman123 {
+  display: flex;
+  justify-content: center;
+}

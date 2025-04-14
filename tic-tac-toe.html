@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <!-- This sets the character encoding to UTF-8 (good for all languages) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This makes the page work on mobile phones and tablets -->
+    <link href="game.css" rel="stylesheet" type="text/css">
+    <!-- This links the CSS file to the HTML page -->
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+    <header>     
+        <button class="ouvrir-dialog"><u>Rules of the game</u></button>   
+        <!-- Button that opens a pop-up with the game rules --> 
+        <dialog class="dialog">
+        <!-- Dialog box that shows the rules when the button is clicked -->
+            <button class="close-dialog">❌</button>
+            <!-- Button to close the dialog -->
+            <h2>Tic Tac Toe Rules</h2>
+            <p>Take turns marking a square with your symbol (X or O).<br>
+                The first player to align three symbols horizontally, vertically, or diagonally wins.<br>
+                If all squares are filled and no one wins, it's a draw!
+                <!-- Instructions on how to play the game -->
+            </p>
+        </dialog>
+        <h1>Let's Play Tic-Tac-Toe!</h1> 
+        <!-- Page title shown to the user -->
+    </header>
+
+    <main>
+        <dialog id="name-dialog">
+             <!-- Dialog box that appears at the start of the game to enter player names -->
+            <p class="title">Let's start the game!</p>
+            <form method="dialog">
+                <label for="player1-name">Player name 1 :</label>
+                <input type="text" id="player1-name" required placeholder="Player's name 1">
+                <label for="player2-name">Player name 2 :</label>
+                <input type="text" id="player2-name" required placeholder="Player's name 2">
+                <button type="submit">Start</button>
+                <!-- Button to start the game -->
+            </form>
+            <a href="game.html">
+                <button id="back-btn">Return</button>
+                <!-- Button to return to the main page -->
+            </a>
+        </dialog>
+
+        <div id="game-container"></div>
+        <!-- Container where the game board will be displayed -->
+        <div id="winning-line"></div>
+        <!-- Element used to draw a line when someone wins -->
+        <div id="status"></div>
+        <!-- Area to show messages (who wins, etc.) -->
+        <button id="restart" onclick="startTicTacToe()">Restart</button>
+        <!-- Button to restart the game -->
+    </main>
+
+    <footer>
+        <a href="game.html">
+            <!-- Link back to the main page -->
+            <button id="back-btn">Return</button>
+        </a>
+    </footer>
+    <script src="tic-tac-toe.js"></script>
+    <!-- Link to the JavaScript file that controls the game -->
+    <script src="pop-up.js"></script>
+    <!-- This script allows the dialog box (the pop-up) to open and close -->
+</body>    
+</html>

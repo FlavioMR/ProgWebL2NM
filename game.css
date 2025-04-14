@@ -1,0 +1,283 @@
+/* ================================
+   Global Reset and Box Model Setup
+   ================================ */
+
+/* Reset default margin and apply border-box model for all elements
+   This ensures consistent spacing and box sizing across different browsers */
+   * {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* =====================
+   Body Styling
+   ===================== */
+
+/* General layout and styling for the body
+   - Sets a light background and dark text for good readability
+   - Applies a clean sans-serif font
+   - Uses Flexbox for vertical alignment of the page */
+body {
+    background-color: #ffffff;
+    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =====================
+   Header Section
+   ===================== */
+
+/* Styles for the top header bar
+   - Centers the content both vertically and horizontally
+   - Applies padding and a green background to make it visually distinct */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Indicates that the rules element is interactive (likely a button or clickable text) */
+#rules {
+    cursor: pointer;
+}
+
+/* Adds space before the heading, helps separate from other header content */
+h1 {
+    margin-left: 50px;
+}
+
+/* ==========================
+   Main Content Area
+   ========================== */
+
+/* Ensures main section takes up remaining space and centers its children */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================
+   Game Selection Layout
+   ========================== */
+
+/* Container that holds multiple game items in a row */
+#games-container {
+    display: flex;
+}
+
+/* Each individual game item: spaced, centered, and evenly sized */
+.game-item {
+    Margin: 2%;  /* Note: 'Margin' should be lowercase - best practice */
+    width: 32%;
+    text-align: center;
+}
+
+/* Game image styling: responsive, rounded corners, and subtle shadow */
+.game-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 6px 6px #cacaca;
+    cursor: pointer;
+}
+
+/* On hover, the image becomes semi-transparent to indicate interactivity */
+.game-item:hover .game-image {
+    opacity: 0.7;
+}
+
+/* Caption under the image for game title/label */
+figcaption {
+    margin-top: 10%;
+    font-weight: bold;
+}
+
+/* ==========================
+   Footer Section
+   ========================== */
+
+/* Footer bar with space between left and right elements */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+/* Profile/user image in footer: styled to appear circular and responsive */
+footer img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Enlarges image on hover for visual feedback */
+footer img:hover {
+    transform: scale(1.1);
+}
+
+/* Positions user image or info to the far left */
+footer .user-left {
+    position: absolute;
+    left: 20px;
+}
+
+/* Positions user image or info to the far right */
+footer .user-right {
+    position: absolute;
+    right: 20px;
+}
+
+/* Styled button or badge in footer for author/credits */
+#made {
+    background-color: #fff;
+    color: #4CAF50;
+    margin: auto;
+    padding: 30px 50px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hover effect for "Made by" button */
+#made:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================
+   Tic-Tac-Toe Game Styling
+   ========================== */
+
+/* ========= Name Entry Pop-Up ========== */
+
+/* Pop-up dialog box for entering player names
+   - Centered, styled with padding and border for visibility */
+#name-dialog {
+    padding: 40px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 8px;
+    position: fixed; 
+    margin: 0px auto; 
+    align-self: center;
+}
+
+/* Form layout inside the dialog - grid for alignment */
+#name-dialog form {
+    display: grid;
+    justify-items: center;
+}
+
+/* Title text in name dialog */
+#name-dialog p.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1em;
+}
+
+/* Labels for input fields */
+#name-dialog label {
+    margin-bottom: 5px;
+}
+
+/* Input box styling: full width with spacing */
+#name-dialog input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Button styling in name dialog */
+#name-dialog button {
+    padding: 25px 70px;
+    margin: 20px auto;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.5rem;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Button hover effect for visual feedback */
+#name-dialog button:hover {
+    background-color: rgb(146, 255, 146);
+}
+
+/* ========= Game Board/Grid ========== */
+
+/* Main game board container */
+#game-container {
+    gap: 5px;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* Each cell of the grid (3x3 for Tic-Tac-Toe)
+   - Centered content, large font for visibility
+   - Bordered for clear separation */
+.cell {
+    height: 100px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Hover effect to make the cell appear clickable */
+.cell:hover {
+    background-color: #ffffff;
+}
+
+/* When a cell is marked (taken), prevent further interaction */
+.cell.taken {
+    background-color: #ddd; /* Visually indicates it’s inactive */
+    pointer-events: none;   /* Prevents additional clicks */
+}
+
+/* ========= Game Status and Controls ========== */
+
+/* Text display for showing whose turn it is or game result */
+#status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+/* Button to restart the game */
+#restart {
+    font-weight: bolder;
+    margin: 20px auto;
+    padding: 15px 50px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Button to go back to a previous screen or menu */
+#back-btn {
+    font-weight: bolder;
+    padding: 15px 50px;
+    background-color: lightgrey;
+    color: black;
+    cursor: pointer;
+}

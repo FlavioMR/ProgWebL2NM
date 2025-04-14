@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This sets the character encoding to UTF-8 (good for all languages) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This makes the page work on mobile phones and tablets -->
+    <link href="game.css" rel="stylesheet" type="text/css">
+    <!-- This links the CSS file to the HTML page --> 
+    <title>Let's Play!</title>        
+</head>
+
+<body>
+    <!-- The content of the page starts here -->
+    <header>     
+        <h1>Are you ready to play?</h1>            
+    </header>
+
+    <main>
+        <p>Choose your game:</p>
+        <div id="games-container">
+            <!-- This is a box that contains all the games -->
+            <figure class="game-item">
+                <a href="tic-tac-toe.html">
+                    <img id="Tic-Tac-Toe" src="Tic-Tac-Toe1.jpg" alt="Jouer au Tic-Tac-Toe" class="game-image">
+                    <!-- A link with an image and a name for the Tic-Tac-Toe game -->
+                </a>
+                <figcaption>Tic-Tac-Toe</figcaption>
+                <!-- This is the caption (legend) for the image. It shows the name of the game under the picture. -->
+            </figure>
+            <figure class="game-item">
+                <a href="rsp.html">
+                    <img id="Rock-Paper-Scissors" src="pierre-papier-ciseaux.png" alt="Rock-Paper-Scissors" class="game-image" />
+                </a>
+                <figcaption>Rock-Paper-Scissors</figcaption>
+                <!-- This is the caption (legend) for the image. It shows the name of the game under the picture. -->
+            </figure>
+            <figure class="game-item">
+                <a href="hangman.html">
+                    <img id="pendue" src="Hangman.jpeg" alt="Hangman" class="game-image" />
+                </a>
+                <figcaption>Hangman</figcaption>
+                <!-- This is the caption (legend) for the image. It shows the name of the game under the picture. -->
+            </figure>
+        </div>            
+    </main>
+
+    <footer>
+        <img id="Utilisateur1" src="utilisateur1.png" alt="User 1" class="user-image" />
+        <!-- Image of a team member (User 1) If we had had a database, we could have stored the user data -->
+        <button class="ouvrir-dialog" id="made">Made by : </button>
+        <!-- A button to open a dialog box that shows project info -->
+        <dialog class="dialog">
+            <!-- This is the dialog box that opens when the user clicks the button -->
+            <button class="close-dialog">❌</button>
+            <!-- A button to close the dialog -->
+            <h2><b>University project - 14 April 2025</b></h2>
+            <p>
+                L2 Numérique et Management<br>
+                Université Toulouse Capitole / TSM<br><br>
+                Teacher: Yuri Cossich Lavinas<br><br>
+                Made by:<br><br>
+                Clara VERBIGUIE = HTML + Javascript pop-up;<br>
+                Lucille MESNARD = CSS + Javascript Tic-Tac-Toe;<br>
+                Flavio MORAIS RENNO = Javascript Rock-Paper-Scissors;<br>
+                Zeyneb BENSAID = Javascript Hangman.<br>
+            </p>
+            <!-- Project details: -->
+        </dialog>
+        <img id="Utilisateur2" src="utilisateur2.png" alt="User 2" class="user-image" />
+        <!-- Image of a second team member (User 2) -->
+    </footer>
+    <script src="pop-up.js"></script>
+    <!-- This script allows the dialog box (the pop-up) to open and close -->
+</body>    
+</html>

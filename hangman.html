@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- This sets the character encoding to UTF-8 (good for all languages) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- This makes the page work on mobile phones and tablets -->
+    <link href="hangman.css" rel="stylesheet"/>
+    <!-- This links the CSS file to the HTML page -->
+    <title>Hangman</title>
+  </head>
+
+  <body>
+    <header>     
+      <button class="ouvrir-dialog"><u>Rules of the game</u></button>    
+      <!-- Button that opens a pop-up with the game rules --> 
+      <dialog class="dialog">
+        <!-- Dialog box that shows the rules when the button is clicked -->
+          <button class="close-dialog">❌</button>
+          <!-- Button to close the dialog -->
+          <h2>Hangman Rules<br></h2>
+          <p>
+            <br>Choose one theme to play among "Fruits", "Animals" and "Countries"<br><br>
+            Guess the hidden word one letter at a time.<br><br>
+            Each incorrect guess draws part of the hangman.<br><br>
+            The game ends when the word is guessed or the drawing is complete.<br><br>
+            <!-- Instructions on how to play the game -->          
+          </p>
+      </dialog>
+      <h1 id="Hangman123">Let's Play Hangman !</h1>
+      <!-- Page title shown to the user -->
+    </header>
+    <main>
+      <div class="container">
+        <div id="options-container"></div>
+        <!-- Area where the player chooses the theme -->
+        <div id="letter-container" class="letter-container hide"></div>
+        <!-- Area where all letters appear (A-Z), hidden at first -->
+        <div id="user-input-section"></div>
+        <!-- Section where the word to guess will be displayed -->
+        <canvas id="canvas"></canvas>
+        <!-- Canvas where the hangman drawing appears -->
+        <div id="new-game-container" class="new-game-popup hide">
+          <!-- End-of-game popup (win or lose), hidden at first -->
+          <div id="result-text"></div>
+          <!-- Message: You Win! / You Lose! -->
+          <button id="new-game-button">New Game</button>
+          <!-- Button to start a new game -->
+        </div>
+      </div>
+    </main>
+    <footer>
+        <a href="game.html">
+          <button id="back-btn">Return</button>
+        </a>
+    </footer> 
+    <script src="hangman.js"></script>
+    <!-- Link to the JavaScript file that controls the game -->
+    <script src="pop-up.js"></script>
+    <!-- This script allows the dialog box (the pop-up) to open and close -->
+  </body>
+
+</html>
